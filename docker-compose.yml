@@ -1,0 +1,12 @@
+services:
+  weekly-planner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weekly-planner-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+
